@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td> username </td>
+                <td> <input type ="text" id= "uname" required></td>
+                <td id = "error1"></td>
+            </tr>
+            <tr>
+                <td >mobilenumber</td>
+                <td><input type ="number" id= "mnum" required></td>
+                <td id = "error1"></td>
+            </tr>
+            <tr>
+            <input type="button" value="validate" onclick="fun()">
+        </tr>
+        </table>
+    </form>
+    <script>
+        function fun (){
+            var unamevalue= document.getElementsById("uname").value;
+            var mnumvalue= document.getElementById("mnum").value;
+            var patt1 =/^[a-zA-Z]{1,6}$/;
+            if(!patt1.test(unamevalue)){
+                document.getElementById("error1").innerHTML="Enter a valid username";
+            }else{
+                document.getElementById("error1").innerHTML="";
+                
+
+            }
+            }
+    </script>
+
+    
+    
+</body>
+</html>
